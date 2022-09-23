@@ -1,0 +1,7 @@
+{
+  "timestamp": "2022-09-17T05:32:52.704+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "",
+  "path": "/test"
+}
