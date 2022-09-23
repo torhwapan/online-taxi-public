@@ -1,0 +1,45 @@
+server:
+  port: 8888
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 43.143.68.39:8848
+  application:
+    name: demo
+  redis:
+    host: 43.143.68.39
+    port: 6379
+    database: 0
+    lettuce:
+      pool:
+        max-idle: 16
+        max-active: 32
+        min-idle: 0
+    timeout: 2000
+    password: 123456
+  kafka:
+    bootstrap-servers: 43.143.68.39:9092
+    producer:
+      batch-size: 16384 # 批量大小
+      buffer-memory: 33554432 # 生产端缓冲区大小
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+
+
+
+#    zookeeper配置
+curator:
+  #重试retryCount次，当会话超时出现后，curator会每间隔elapsedTimeMs毫秒时间重试一次，共重试retryCount次。
+  retryCount: 5
+  elapsedTimeMs: 5000
+  #服务器信息
+  connectString: 43.143.68.39:2181
+  #会话超时时间设置
+  sessionTimeoutMs: 60000
+  #连接超时时间
+  connectionTimeoutMs: 5000
+
+
+
